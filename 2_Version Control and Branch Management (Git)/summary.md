@@ -1,5 +1,7 @@
 2_Version Control and Branch Management (Git)
+
 Resume
+
 Dalam materi ini mempelajari:
 1. Version Control
 2. Branch Management
