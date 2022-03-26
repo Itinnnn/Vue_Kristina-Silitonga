@@ -11,9 +11,6 @@
               {{ todo.text }}
             </router-link>
           </span>
-
-          
-
           <div class="buttons">
             <button v-on:click="deleteTodo(index)">Delete</button>
             <button v-on:click="editTodo(index)">
@@ -41,19 +38,7 @@ export default {
       editidx: null,
     };
   },
-  mounted() {
-    if (localStorage.todos) {
-      this.todos = JSON.parse(localStorage.todos);
-    }
-  },
-  watch: {
-    todos: {
-      handler(newTodo) {
-        localStorage.todos = JSON.stringify(newTodo);
-      },
-      deep: true,
-    },
-  },
+
   methods: {
     addTodo() {
       var newItem = this.newTodo.trim();
@@ -62,7 +47,6 @@ export default {
           text: newItem,
         });
         this.newTodo = "";
-        this.saveData();
       }
     },
     todotextUpdate(e) {

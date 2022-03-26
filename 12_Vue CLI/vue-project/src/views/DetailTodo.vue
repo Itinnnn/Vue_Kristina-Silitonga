@@ -1,9 +1,11 @@
 <template>
   <div>
-    <h1>Item : {{ item.text }}</h1>
     <router-link to="/">
       <button>Kembali</button>
     </router-link>
+
+     <h1>Menjadi Front End Dev</h1>
+     <h4>{{ item.text }} </h4>
   </div>
 </template>
 
@@ -16,10 +18,8 @@ export default {
   },
   beforeMount() {
     const newIndex = this.$route.params.index;
-    if (localStorage.todos) {
       this.item = JSON.parse(localStorage.todos)[newIndex];
     }
-  },
 };
 </script>
 
