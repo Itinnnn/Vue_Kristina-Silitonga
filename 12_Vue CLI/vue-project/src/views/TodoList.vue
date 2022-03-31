@@ -28,6 +28,7 @@
     <p v-if="todos.length >= 4">Hebat!</p>
   </div>
 </template>
+
   <script>
 export default {
   setup() {},
@@ -37,6 +38,20 @@ export default {
       todos: [],
       editidx: null,
     };
+  },
+
+  mounted() {
+    if (localStorage.todos) {
+      this.todos = JSON.parse(localStorage.todos);
+    }
+  },
+  watch: {
+    todos: {
+      handler(newTodo) {
+        localStorage.todos = JSON.stringify(newTodo);
+      },
+      deep: true,
+    },
   },
 
   methods: {
