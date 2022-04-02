@@ -56,5 +56,9 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "jest": {
+    "preset": "@vue/cli-plugin-unit-jest",
+    "collectCoverage": true
+  }
 }

@@ -43,13 +43,19 @@ describe("Melakukan average", () => {
     test("average dua bilangan positif", () => {
         expect(average(10,20)/2).toBe(15);
     });
+    test("average dua bilangan non numerik", () => {
+        expect(average("10","20")/"2").toBe("15");
+    });
+    test("average dua bilangan not to be", () => {
+        expect(average(3,2)/2).not.toBe(3);
+    });
 });
 
 describe("Melakukan sisaBagi", () => {
     test("sisaBagi dua bilangan positif", () => {
         expect(sisaBagi(7,3)).toBe(1);
     });
-    test("average dua bilangan non numerik", () => {
+    test("sisaBagi dua bilangan non numerik", () => {
         expect(sisaBagi("9","3")).toBe("0");
     });
 });

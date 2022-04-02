@@ -30,8 +30,8 @@ export const luasLingkaran = (bilanganSatu, bilanganDua) => {
     return bilanganSatu * bilanganDua * 3.14;
 };
 
-export const luasKubus= (6, bilanganSatu, bilanganSatu) => {
-    return jumlahSisi * bilanganSatu * bilanganSa;
+export const luasKubus = (6, bilanganSatu, bilanganSatu) => {
+    return jumlahSisi * bilanganSatu * bilanganSatu;
 };
 
 export function volumeKubus = (variabelSatu, variabelDua, variabelTiga) => {
