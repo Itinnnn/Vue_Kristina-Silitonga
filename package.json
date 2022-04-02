@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "@vue/cli-plugin-unit-jest": "~5.0.0"
+  }
+}

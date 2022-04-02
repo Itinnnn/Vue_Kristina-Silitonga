@@ -1,3 +1,11 @@
 {
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "eslint.options": {
+    
+    
+    
+        "eslint.options": {
+            "configFile": "\\ABSOLUTE\\PATH\\TO\\YOUR\\PROJECT\\VUE_PROJECT\\babel.config.js"
+        }
+    }
 }
