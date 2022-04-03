@@ -38,16 +38,16 @@ describe("Melakukan Perkalian", () => {
 
 describe("Melakukan average", () => {
     test("average dua bilangan negatif", () => {
-        expect(average(-10,-20)/2).toBe(5);
+        expect(average(-10,-20,-2, -3, -4)).toBeNaN;
     });
     test("average dua bilangan positif", () => {
-        expect(average(10,20)/2).toBe(15);
+        expect(average(5, 8, 2, 10, 20)).toBe(7.5);
     });
     test("average dua bilangan non numerik", () => {
-        expect(average("10","20")/"2").toBe("15");
+        expect(average("10","20","4","7", "9")).toBe(255);
     });
     test("average dua bilangan not to be", () => {
-        expect(average(3,2)/2).not.toBe(3);
+        expect(average(6, 8, 4, 3,2)).not.toBe(3);
     });
 });
 
@@ -56,7 +56,7 @@ describe("Melakukan sisaBagi", () => {
         expect(sisaBagi(7,3)).toBe(1);
     });
     test("sisaBagi dua bilangan non numerik", () => {
-        expect(sisaBagi("9","3")).toBe("0");
+        expect(sisaBagi("9","3")).toBe(0);
     });
 });
 
@@ -65,7 +65,7 @@ describe("Melakukan luasPersegi", () => {
         expect(luasPersegi(7,3)).toBe(21);
     });
     test("luasPersegi dua bilangan non numerik", () => {
-        expect(luasPersegi("9","3")).toBe("27");
+        expect(luasPersegi("9","3")).toBe(27);
     });
 });
 
@@ -74,7 +74,7 @@ describe("Melakukan luas Lingkaran", () => {
         expect(luasLingkaran(1,1)).toBe(3.14);
     });
     test("luasLingkaran dua bilangan negatif", () => {
-        expect(luasLingkaran(-1,-1)).toBe("3.14");
+        expect(luasLingkaran(-1,-1)).toBe(3.14);
     });
 });
 
@@ -86,7 +86,7 @@ describe("Melakukan luas Kubus", () => {
         expect(luasKubus(6,-1,-1)).toBe(6);
     });
     test("luasLingkaran dua bilangan non numerik", () => {
-        expect(luasKubus("6","-1","-1")).toBe("6");
+        expect(luasKubus("6","-1","-1")).toBe(6);
     });
 });
 
@@ -98,6 +98,6 @@ describe("Melakukan volume Kubus", () => {
         expect(volumeKubus(6,-1,-1)).toBe(6);
     });
     test("volume Kubus dua bilangan non numerik", () => {
-        expect(volumeKubus("6","-1","-1")).toBe("6");
+        expect(volumeKubus("6","-1","-1")).toBe(6);
     });
 });

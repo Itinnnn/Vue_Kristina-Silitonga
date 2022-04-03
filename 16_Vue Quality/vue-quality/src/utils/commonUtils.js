@@ -14,8 +14,14 @@ export const Perkalian = (bilanganSatu, bilanganDua) => {
     return bilanganSatu * bilanganDua;
 };
 
-export const average = (bilanganSatu, bilanganDua) => {
-    return (bilanganSatu + bilanganDua)/2;
+export let average = (angka1, angka2, angka3, angka4, angka5) => {
+   const listAngka = [angka1, angka2, angka3, angka4, angka5];
+   let total = 0;
+   listAngka.map((item)=> {
+    return total += item;
+   });
+   average = total / 5;
+   return average;
 };
 
 export const sisaBagi = (bilanganSatu, bilanganDua) => {
@@ -30,10 +36,10 @@ export const luasLingkaran = (bilanganSatu, bilanganDua) => {
     return bilanganSatu * bilanganDua * 3.14;
 };
 
-export const luasKubus = (6, bilanganSatu, bilanganSatu) => {
-    return jumlahSisi * bilanganSatu * bilanganSatu;
+export const luasKubus = (jumlahSisi, bilanganSatu, bilanganDua) => {
+    return 6 * bilanganSatu * bilanganDua;
 };
 
-export function volumeKubus = (variabelSatu, variabelDua, variabelTiga) => {
+export const volumeKubus = (variabelSatu, variabelDua, variabelTiga) => {
     return variabelSatu * variabelDua * variabelTiga;
 }
