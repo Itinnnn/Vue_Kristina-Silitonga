@@ -1,5 +1,13 @@
 {
+  "dependencies": {
+    "axios": "^0.26.1",
+    "vuetify": "^2.6.2"
+  },
   "devDependencies": {
-    "@vue/cli-plugin-unit-jest": "~5.0.0"
+    "@vue/cli-plugin-unit-jest": "~5.0.0",
+    "sass": "~1.32.0",
+    "sass-loader": "^10.0.0",
+    "vue-cli-plugin-vuetify": "~2.4.8",
+    "vuetify-loader": "^1.7.0"
   }
 }

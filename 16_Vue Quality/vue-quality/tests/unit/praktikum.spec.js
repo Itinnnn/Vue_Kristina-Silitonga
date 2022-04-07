@@ -37,16 +37,16 @@ describe("Melakukan Perkalian", () => {
 });
 
 describe("Melakukan average", () => {
-    test("average dua bilangan negatif", () => {
+    test("average bilangan negatif", () => {
         expect(average(-10,-20,-2, -3, -4)).toBeNaN;
     });
-    test("average dua bilangan positif", () => {
+    test("average bilangan positif", () => {
         expect(average(5, 8, 2, 10, 20)).toBe(7.5);
     });
-    test("average dua bilangan non numerik", () => {
+    test("average bilangan non numerik", () => {
         expect(average("10","20","4","7", "9")).toBe(255);
     });
-    test("average dua bilangan not to be", () => {
+    test("average bilangan not to be", () => {
         expect(average(6, 8, 4, 3,2)).not.toBe(3);
     });
 });
