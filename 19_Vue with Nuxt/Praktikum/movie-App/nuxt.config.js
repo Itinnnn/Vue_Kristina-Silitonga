@@ -35,7 +35,25 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    '@nuxtjs/pwa',
   ],
+  pwa: {
+    meta: {
+      title: 'PWA Movie',
+      author: 'Kristina',
+    },
+    manifest: {
+      name: 'Vue with Nuxt',
+      short_name: 'VwN',
+      lang: 'id',
+      useWebmanifestExtension: false,
+      start_url: '/',
+      theme_color: 'ffffff',
+    },
+    workbox: {
+      dev: true,
+    },
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ['@nuxtjs/axios'],
