@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@nuxtjs/axios": "^5.13.6",
     "axios": "^0.26.1",
     "vuetify": "^2.6.2"
   },
