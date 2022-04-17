@@ -1,0 +1,46 @@
+mutation MyMutation {
+    insert_anggota(objects: [{id: 1, nama: "Budi"}, {id: 2, nama: "Sita"}, {id: 3, nama: "Angga"}]) {
+      returning {
+        id
+        nama
+      }
+    }
+  },
+
+  mutation MyMutation {
+    insert_keterangan(objects: [{id: 1, id_anggota: 1, nilai: 85, pelajaran: "Sistem Informasi", status: true}, {id: 2, id_anggota: 1, nilai: 65, pelajaran: "React", status: false}, {id: 3, id_anggota: 2, nilai: 90, pelajaran: "Sistem Informasi", status: true}, {id: 4, id_anggota: 2, nilai: 50, pelajaran: "React", status: false}]) {
+      returning {
+        status
+        pelajaran
+        nilai
+        id_anggota
+        id
+      }
+    }
+  },
+
+  query MyQuery {
+    keterangan(where: {status: {_eq: true}}) {
+      id
+    }
+  },
+
+  mutation MyMutation {
+    insert_keterangan(objects: [{nilai: 90, pelajaran: "Sistem Informasi", status: true, id: 3}, 
+      {nilai: 55, pelajaran: "React", status: false, id: 3}]) {
+      returning {
+        id_anggota
+      }
+    }
+  },
+
+  mutation MyMutation {
+    update_keterangan(where: {status: {_eq: true}}) {
+      returning {
+        status
+      }
+    }
+  }
+  
+
+
