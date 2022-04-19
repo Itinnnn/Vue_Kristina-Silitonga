@@ -26,18 +26,17 @@ mutation MyMutation {
   },
 
   mutation MyMutation {
-    insert_keterangan(objects: [{nilai: 90, pelajaran: "Sistem Informasi", status: true, id: 3}, 
-      {nilai: 55, pelajaran: "React", status: false, id: 3}]) {
+    insert_keterangan(objects: [{id: 5, id_anggota: 3, pelajaran: "Sistem informasi", nilai: 90, status: true}, {id: 6, id_anggota: 3, pelajaran: "React", nilai: 55, status: false}]) {
       returning {
-        id_anggota
+        id
       }
     }
-  },
-
+  }
+  
   mutation MyMutation {
-    update_keterangan(where: {status: {_eq: true}}) {
+    update_keterangan(where: {status: {}}, _set: {status: true}) {
       returning {
-        status
+        id
       }
     }
   }
