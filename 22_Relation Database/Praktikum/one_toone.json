@@ -1,0 +1,53 @@
+query MyQuery {
+    keterangan {
+      id_anggota
+      one_toone {
+        nama
+      }
+    }
+  }
+
+//   dengan hasil query
+
+{
+    "data": {
+      "keterangan": [
+        {
+          "id_anggota": 1,
+          "one_toone": {
+            "nama": "Budi"
+          }
+        },
+        {
+          "id_anggota": 1,
+          "one_toone": {
+            "nama": "Budi"
+          }
+        },
+        {
+          "id_anggota": 2,
+          "one_toone": {
+            "nama": "Sita"
+          }
+        },
+        {
+          "id_anggota": 2,
+          "one_toone": {
+            "nama": "Sita"
+          }
+        },
+        {
+          "id_anggota": 3,
+          "one_toone": {
+            "nama": "Angga"
+          }
+        },
+        {
+          "id_anggota": 3,
+          "one_toone": {
+            "nama": "Angga"
+          }
+        }
+      ]
+    }
+  }

@@ -1,0 +1,50 @@
+query MyQuery {
+    anggota {
+      id
+      one_tomany {
+        pelajaran
+      }
+    }
+  }
+
+// dengan hasil query
+
+{
+    "data": {
+      "anggota": [
+        {
+          "id": 1,
+          "one_tomany": [
+            {
+              "pelajaran": "Sistem informasi"
+            },
+            {
+              "pelajaran": "React"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "one_tomany": [
+            {
+              "pelajaran": "Sistem informasi"
+            },
+            {
+              "pelajaran": "React"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "one_tomany": [
+            {
+              "pelajaran": "Sistem informasi"
+            },
+            {
+              "pelajaran": "React"
+            }
+          ]
+        }
+      ]
+    }
+  }
